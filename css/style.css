@@ -85,3 +85,17 @@ dd {
     text-decoration: none;
     color: #666;
 }
+
+@font-face {
+    /* フォント情報 https://font.spicy-sweet.com/ */
+    font-family: 'kawaii';
+    src: url('../fonts/kawaii.ttf') format('truetype');
+}
+
+h1,h2,h3{
+    font-family: 'kawaii';
+}
+
+header{
+    background-color: #f2e175;
+}
