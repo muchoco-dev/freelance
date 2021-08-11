@@ -1,7 +1,11 @@
 body {
-    padding: 10px;
     background-color: antiquewhite;
 }
+
+main {
+    padding: 24px;
+}
+
 h1 {
     font-size: 2em;
     margin-block-start: 0.5em;
@@ -9,6 +13,7 @@ h1 {
     border-left: saddlebrown solid 10px;
     padding-left: 0.2em;
 }
+
 h2 {
     font-size: 1.4em;
     margin-block-start: 0.35em;
@@ -16,6 +21,7 @@ h2 {
     border-left: saddlebrown solid 10px;
     padding-left: 0.2em;
 }
+
 h3 {
     font-size: 1.2em;
     margin-block-start: 0.30em;
@@ -34,6 +40,7 @@ ul {
     padding-inline-start: 2em;
 
 }
+
 li {
     display: list-item;
     text-align: -webkit-match-parent;
@@ -57,15 +64,25 @@ dd {
 }
 
 /* header menu*/
-.navbar{
+.navbar {
     position: sticky;
+    display: flex;
+    justify-content: space-between;
     top: 0;
     left: 0;
+    padding: 0 24px;
     background-color: #f2e175;
-    box-shadow: 0px 5px 5px rgba(128,128,128,.5);
+    box-shadow: 0px 5px 5px rgba(128, 128, 128, .5);
 }
 
-.menu{
+.navbar__logo {
+    display: flex;
+    align-items: center;
+    font-family: 'kawaii';
+    font-size: 36px;
+}
+
+.navbar__nav__menu {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,14 +91,14 @@ dd {
     min-height: 100px;
     width: 100%;
     padding: 0;
-    
+
 }
 
-.menu-item{
+.navbar__nav__menu-item {
     list-style: none;
 }
 
-.menu-item a{
+.navbar__nav__menu-item a {
     text-decoration: none;
     color: #666;
 }
@@ -92,10 +109,12 @@ dd {
     src: url('../fonts/kawaii.ttf') format('truetype');
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
     font-family: 'kawaii';
 }
 
-header{
+header {
     background-color: #f2e175;
 }
