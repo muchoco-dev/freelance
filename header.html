@@ -1,0 +1,24 @@
+<div class="navbar__logo">
+    <a href="/index.html">
+        <span>フリーランスの便利帳</span>
+    </a>
+</div>
+<nav class='navbar__nav'>
+    <span class="material-icons-outlined drawer-menu-btn">
+        menu
+    </span>
+    <ul class="navbar__nav__menu">
+        <li class="navbar__nav__menu-item">
+            <a href="index.html">TOP</a>
+        </li>
+        <li class="navbar__nav__menu-item">
+            <a href="find_job.html">案件探しサイト</a>
+        </li>
+    </ul>
+</nav>
+
+<script>
+    $('.drawer-menu-btn').on('click', function () {
+        $('.navbar__nav__menu').toggleClass('show');
+    });
+</script>
