@@ -1,5 +1,7 @@
 body {
     background-color: antiquewhite;
+    letter-spacing: 0.05em;
+    line-height: 1.5em;
 }
 
 main {
