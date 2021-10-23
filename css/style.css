@@ -174,9 +174,22 @@ header {
     background-color: #f2e175;
 }
 
+section {
+  margin-bottom: 3em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
 /* fontawesome用 */
 svg[class^="svg"] {
   margin-right: 0.5em;
+}
+
+.alert {
+  color: red;
 }

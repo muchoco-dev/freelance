@@ -1,0 +1,29 @@
+/**************
+howto用スタイルシート
+**************/
+
+.table__howto {
+  border-collapse: collapse;
+}
+
+.table__howto tr,
+.table__howto td {
+  border: 1px solid #000;
+  padding: 0.5em 0.8em;
+  /* min-width: 5em; */
+}
+
+.table__code {
+  background: #000;
+  margin: 1em auto;
+  padding: 1em;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .table__howto {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+}
