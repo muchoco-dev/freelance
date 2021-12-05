@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サイト設計方法 | フリーランスの便利帳</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/howto.css">
+  <link rel="stylesheet" id="google-icons-css"
+    href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp&amp;ver=1.0.0"
+    type="text/css" media="all">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script defer src="https://pro.fontawesome.com/releases/v5.10.0/js/all.js" integrity="sha384-G/ZR3ntz68JZrH4pfPJyRbjW+c0+ojii5f+GYiYwldYU69A+Ejat6yIfLSxljXxD" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <header class="navbar header"></header>
+
+  <main>
+    <header>
+      <h1>サイト設計方法</h1>
+    </header>
+    <article>
+      <section>
+        <h2>ファイル構成</h2>
+        <p>
+          ファイル構成は次のようになっています。（2021/10/23時点）<br>
+          「main.js」を通じて、&lt;header class=&quot;navbar header&quot;&gt;の中に共通ヘッダーが読み込まれます。
+        </p>
+        <table class="table__howto">
+          <tr>
+            <td>css/</td>
+            <td></td>
+            <td>スタイルシート格納</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>reset.css</td>
+            <td>ブラウザ間の書式リセット用CSS　<span class="alert">※コアファイルのため編集NG</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>style.css</td>
+            <td>全ページ共通用CSS</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>***.css</td>
+            <td>各ページ用CSS</td>
+          </tr>
+          <tr>
+            <td>fonts/</td>
+            <td></td>
+            <td>フリーフォント格納用</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>***.ttf</td>
+            <td>フリーフォントファイル</td>
+          </tr>
+          <tr>
+            <td>images/</td>
+            <td></td>
+            <td>画像格納用</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>ページ名/[画像]</td>
+            <td>ページ名ごとの使用ファイル　png/svg/jpg/gifなど</td>
+          </tr>
+          <tr>
+            <td>js/</td>
+            <td></td>
+            <td>Javascript格納</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>main.js</td>
+            <td>全ページ用JS</td>
+          </tr>
+          <tr>
+            <td>index.html</td>
+            <td></td>
+            <td>トップページ</td>
+          </tr>
+          <tr>
+            <td>header.html</td>
+            <td></td>
+            <td>全ページ共通ヘッダーhtml</td>
+          </tr>
+          <tr>
+            <td>***.html</td>
+            <td></td>
+            <td>各ページ用html</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>新規ページの作り方</h2>
+        <p>
+          基本的には既存のページからコピペで問題ないと思います。<br>
+          CSSは「reset.css」「style.css」以外は自由にカスタム可能ですが、どのページからの参照が把握できるように<br>
+          「ページ名.css」などわかりやすいネーミングをするのがおすすめです。<br>
+          ページ毎のコンテンツを編集するときは、&lt;main&gt;配下の&lt;article&gt;内をカスタムします。
+        </p>
+        <h3>CSSスタイル名の付け方</h3>
+        <p>現時点では、構成要素に対して<br>
+          <div class="table__code">[構成要素名]__[子要素]__[孫要素]-[補足要素]</div>
+          のような<a href="https://qiita.com/aki4000/items/73f93acee406d08db1e3" rel=”noopener noreferrer” target="_blank">スネークケース</a>準拠の記法でクラス名を付けています。
+        </p>
+        <p>例）header.html 「.navbar__nav__menu」<br>
+          →ナビゲーション > ナビ > メニュー
+        </p>
+      </section>
+
+      <section>
+        <h2>フリーアイコンの使用</h2>
+        <p>
+          現在、<a href="https://fontawesome.com/" rel=”noopener noreferrer” target="_blank">FontAwesome</a>を適用しています。(形式：SVG with CDN)<br>
+          新しく追加したい場合は、メニュー「Icons」から任意のワードで検索後、アイコンページの&lt;i&gt;タグをコピペして使用できます。
+          <img src="images/howto/demo01.png" alt="">
+        </p>
+      </section>
+
+    </article>
+  </main>
+</body>
+
+</html>
